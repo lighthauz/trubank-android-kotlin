@@ -1,4 +1,4 @@
-package com.trusona.trubank.ui
+package com.trusona.trubank.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -11,7 +11,7 @@ import com.trusona.trubank.widgets.MenuNavItemListener
 import kotlinx.android.synthetic.main.activity_trubank.*
 import kotlinx.android.synthetic.main.app_bar_trubank.*
 
-class TrubankActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

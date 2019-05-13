@@ -5,9 +5,9 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import com.trusona.trubank.R
-import com.trusona.trubank.ui.TrubankActivity
+import com.trusona.trubank.ui.activity.HomeActivity
 
-class MenuNavItemListener(private val trubankActivity: TrubankActivity) :
+class MenuNavItemListener(private val homeActivity: HomeActivity) :
     NavigationView.OnNavigationItemSelectedListener {
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -29,7 +29,7 @@ class MenuNavItemListener(private val trubankActivity: TrubankActivity) :
 
             }
         }
-        val drawerLayout: DrawerLayout = trubankActivity.findViewById(R.id.drawerLayout)
+        val drawerLayout: DrawerLayout = homeActivity.findViewById(R.id.drawerLayout)
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
