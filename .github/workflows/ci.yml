@@ -26,7 +26,7 @@ jobs:
         token: ${{ secrets.CODECOV_TOKEN }}
         fail_ci_if_error: true
         flags: unittests
-        file: trubank-android-kotlin/app/build/reports/lint-results.xml
+        file: ./trubank-android-kotlin/app/build/reports/lint-results.xml
     - name: Slack Notification
       uses: innocarpe/actions-slack@v1
       with:
