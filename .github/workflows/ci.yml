@@ -29,7 +29,7 @@ jobs:
       uses: innocarpe/actions-slack@v1
       with:
         status: ${{ job.status }}
-        success_text: 'build Passed :trump-smile: [codecov report](https://codecov.io/github/lighthauz/trubank-android-kotlin/commit/${{github.sha}})'
+        success_text: 'build Passed :trump-smile: <a href="https://codecov.io/github/lighthauz/trubank-android-kotlin/commit/${{github.sha}}">codecov report</a>'
         failure_text: 'build Failed :trump-shaking:'
         cancelled_text: 'build Cancelled :trump-hair:'
       env:
