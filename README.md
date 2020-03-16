@@ -1,1 +1,1 @@
-![trubank-android-kotlin](https://github.com/lighthauz/trubank-android-kotlin/workflows/.github/workflows/android.yml/badge.svg)
+![ ](https://github.com/lighthauz/trubank-android-kotlin/workflows/Android%20CI/badge.svg)
