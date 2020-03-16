@@ -25,4 +25,4 @@ jobs:
         echo "trusonaPassword: ${trusonaPassword}"
         ./gradlew build
     - name: Slack Notification
-      uses: slack-notification
+      uses: ./slack-notification
