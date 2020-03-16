@@ -1,1 +1,1 @@
-![Android CI](https://github.com/lighthauz/trubank-android-kotlin/workflows/Android%20CI/badge.svg?branch=master)
+![Android CI](https://github.com/lighthauz/trubank-android-kotlin/workflows/Trubank%20CI/badge.svg?branch=master)
