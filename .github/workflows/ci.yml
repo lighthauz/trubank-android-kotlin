@@ -25,7 +25,6 @@ jobs:
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         fail_ci_if_error: true
-        file: ./lint-results.xml
     - name: Slack Notification
       uses: innocarpe/actions-slack@v1
       with:
