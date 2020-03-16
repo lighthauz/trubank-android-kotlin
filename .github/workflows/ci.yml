@@ -21,8 +21,7 @@ jobs:
         echo "trusonaPassword: ${trusonaPassword}"
         ./gradlew build
     - name: Test Coverage
-    - uses: actions/checkout@master
-    - uses: codecov/codecov-action@v1
+      uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         fail_ci_if_error: true
