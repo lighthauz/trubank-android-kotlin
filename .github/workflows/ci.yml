@@ -25,4 +25,12 @@ jobs:
         echo "trusonaPassword: ${trusonaPassword}"
         ./gradlew build
     - name: Slack Notification
-      uses: ./slack-notification
+      uses: innocarpe/actions-slack@v1
+      with:
+        status: ${{ job.status }}
+        success_text: 'Step Succeeded :trump-smile:'
+        failure_text: 'Step Failed :trump-shaking:'
+        cancelled_text: 'Step Cancelled :trump-hair:'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
