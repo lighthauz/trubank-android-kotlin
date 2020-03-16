@@ -1,0 +1,19 @@
+def currentVersionCode = environmentValue.call("TRAVIS_BUILD_NUMBER") as Integer ?: 65535
+
+def branch = environmentValue.call("GITHUB_HEAD_REF") ?: executeCmd.call("git rev-parse --abbrev-ref HEAD") ?: "unknown"
+def currentTag = executeCmd.call("git describe --tags --abbrev=0 HEAD") ?: "-1"
+def commitCount = executeCmd.call("git log ${currentTag}..HEAD --oneline")?.split("\n")?.length ?: "-99"
+def event = environmentValue.call("GITHUB_EVENT_NAME") ?: "push"
+def currentVersion
+
+if (event == "push" && (branch?.startsWith("release") || branch == "master" || branch == "uat")) {
+  currentVersion = environmentValue.call("GITHUB_RUN_NUMBER") ?: "${currentTag}"
+}
+else {
+  currentVersion = "${branch}.${commitCount}"
+}
+
+ext.currentVersionCode = currentVersionCode
+ext.currentVersion = currentVersion
+
+println "Current Version: ${currentVersion}"

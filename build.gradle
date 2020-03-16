@@ -11,6 +11,27 @@ buildscript {
     }
 }
 
+ext.executeCmd = { cmd ->
+    def process = cmd.execute()
+    def output = new ByteArrayOutputStream()
+    process.waitForProcessOutput(output, new ByteArrayOutputStream())
+
+    if (process.exitValue() == 0) {
+        output.toString().trim()
+    }
+    else {
+        println "command: ${cmd} - (${process.exitValue()})"
+    }
+}
+
+ext.environmentValue = { key ->
+    System.getenv(key as String)?.trim() ?: null
+}
+
+ext.currentBranch = {
+    environmentValue.call("GITHUB_HEAD_REF") ?: executeCmd.call("git rev-parse --abbrev-ref HEAD") ?: "master"
+}
+
 allprojects {
     repositories {
         google()
