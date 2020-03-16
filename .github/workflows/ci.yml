@@ -21,7 +21,7 @@ jobs:
         echo "trusonaPassword: ${trusonaPassword}"
         ./gradlew build jacocoTestReport assembleAndroidTest
     - name: Test Coverage
-      uses: codecov/codecov-action@v1
+      uses: iansu/codecov-action-node@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         fail_ci_if_error: true
