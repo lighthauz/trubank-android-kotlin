@@ -29,8 +29,8 @@ jobs:
       uses: innocarpe/actions-slack@v1
       with:
         status: ${{ job.status }}
-        success_text: 'build Passed :trump-smile: <https://codecov.io/github/lighthauz/trubank-android-kotlin/commit/${{github.sha}}|codecov>'
-        failure_text: 'build Failed :trump-shaking:'
+        success_text: '<https://codecov.io/github/lighthauz/trubank-android-kotlin/commit/${{github.sha}}|Build Passed> :trump-smile:'
+        failure_text: '<https://codecov.io/github/lighthauz/trubank-android-kotlin/commit/${{github.sha}}|Build Failed> :trump-shaking:'
         cancelled_text: 'build Cancelled :trump-hair:'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
