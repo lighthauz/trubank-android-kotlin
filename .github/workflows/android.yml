@@ -20,4 +20,7 @@ jobs:
       env:
         trusonaUsername: ${{ secrets.trusonaUsername }}
         trusonaPassword: ${{ secrets.trusonaPassword }}
-      run: ./gradlew build
+      run: |
+        echo "trusonaUsername: ${trusonaUsername}"
+        echo "trusonaPassword: ${trusonaPassword}"
+        ./gradlew build
