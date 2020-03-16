@@ -20,8 +20,8 @@ allprojects {
 
         maven {
             credentials {
-                username = trusonaUsername
-                password = trusonaPassword
+                username = System.getenv(trusonaUsername)
+                password = System.getenv(trusonaPassword)
             }
             url = "https://trusona.jfrog.io/trusona/sdk-releases/"
         }
