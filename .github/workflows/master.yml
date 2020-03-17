@@ -1,0 +1,36 @@
+name: Master CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build with Gradle
+        env:
+          trusonaUsername: ${{ secrets.trusonaUsername }}
+          trusonaPassword: ${{ secrets.trusonaPassword }}
+        run: |
+          echo "trusonaUsername: ${trusonaUsername}"
+          echo "trusonaPassword: ${trusonaPassword}"
+          ./gradlew assembleDebug
+      - name: upload artifact to Firebase App Distribution
+        uses: wzieba/Firebase-Distribution-Github-Action@v1.1.1
+        with:
+          appId: ${{secrets.FIREBASE_APP_ID}}
+          token: ${{secrets.FIREBASE_TOKEN}}
+          groups: testers
+          file: app/build/outputs/apk/debug/app-debug.apk
+      - name: Slack Notification
+        uses: innocarpe/actions-slack@v1
+        with:
+          status: ${{ job.status }}
+          success_text: 'new Build Available :firebase: :trump-smile:'
+          failure_text: 'Error publishing a new build :firebase: :trump-shaking:'
+          cancelled_text: 'build Cancelled :trump-hair:'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
