@@ -1,0 +1,40 @@
+name: UAT CI
+
+on:
+  pull_request:
+    branches: [ master ]
+
+  schedule:
+    - cron: "0 2 * * 1-5"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+      - name: Build with Gradle
+        env:
+          trusonaUsername: ${{ secrets.trusonaUsername }}
+          trusonaPassword: ${{ secrets.trusonaPassword }}
+        run: |
+          echo "trusonaUsername: ${trusonaUsername}"
+          echo "trusonaPassword: ${trusonaPassword}"
+          ./gradlew build jacocoTestReport assembleAndroidTest
+      - name: Test Coverage
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
+      - name: Slack Notification
+        uses: innocarpe/actions-slack@v1
+        with:
+          status: ${{ job.status }}
+          success_text: '<https://codecov.io/github/lighthauz/trubank-android-kotlin/commit/${{github.sha}}|Build Passed> :trump-smile:'
+          failure_text: '<https://codecov.io/github/lighthauz/trubank-android-kotlin/commit/${{github.sha}}|Build Failed> :trump-shaking:'
+          cancelled_text: 'build Cancelled :trump-hair:'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
