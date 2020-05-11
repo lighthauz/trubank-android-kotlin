@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Trubank</string>
+    <string name="upgrade_to_executive">Upgrade to Executive</string>
+    <string name="exchange_money">Exchange Money</string>
+    <string name="share">Share</string>
+    <string name="no_passwords">#NoPasswords</string>
+
+    <!-- Sign up bottom sheet -->
+    <string name="create_account">Continue</string>
+    <string name="disclaimer">By tapping continue you agree to AcmeBank\'s Terms &amp; Conditions</string>
+    <string name="copyright_text1">\u00A9 2020 TruMobile Banking Corporation. All rights reserved. TrueMobile Banking N.A. Member. Equal TruBanking Lender</string>
+    <string name="enter_email_address">user@example.com</string>
+    <string name="email">Email Address</string>
 </resources>
