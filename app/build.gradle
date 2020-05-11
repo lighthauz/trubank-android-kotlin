@@ -77,6 +77,8 @@ dependencies {
     implementation "org.koin:koin-android-viewmodel:2.1.5"
     implementation "org.koin:koin-androidx-scope:2.1.5"
 
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
 
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test:runner:1.2.0'
