@@ -1,13 +1,14 @@
 buildscript {
-    ext.kotlin_version = '1.3.61'
+    ext.kotlin_version = '1.3.72'
+    ext.koin_version = '2.1.5'
     repositories {
         google()
         jcenter()
-        
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.1'
+        classpath 'com.android.tools.build:gradle:4.0.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.koin:koin-gradle-plugin:$koin_version"
     }
 }
 
@@ -35,10 +36,10 @@ ext.currentBranch = {
 allprojects {
     repositories {
         google()
-        mavenCentral()
         mavenLocal()
+        maven { url "https://jitpack.io" }
+        maven { url  "https://dl.bintray.com/thitu/releases" }
         jcenter()
-
         maven {
             credentials {
                 username = System.getenv("trusonaUsername")

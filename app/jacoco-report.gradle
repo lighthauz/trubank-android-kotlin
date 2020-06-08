@@ -40,10 +40,10 @@ task jacocoTestReport(type: JacocoReport, dependsOn: ['testDebugUnitTest']) {
   def debugTree = fileTree(dir: "${buildDir}/intermediates/javac/standardDebug/compileStandardDebugJavaWithJavac/classes/com/trusona/trubank", excludes: fileFilter)
   def mainSrc = "${project.projectDir}/src/main/java"
 
-  classDirectories = files([debugTree])
-  additionalSourceDirs = files([mainSrc])
-  sourceDirectories = files([mainSrc])
-  executionData = files("${buildDir}/jacoco/testDebugUnitTest.exec")
+  classDirectories.from = files([debugTree])
+  additionalSourceDirs.from = files([mainSrc])
+  sourceDirectories.from = files([mainSrc])
+  executionData.from = files("${buildDir}/jacoco/testDebugUnitTest.exec")
 }
 
 task jacoco {

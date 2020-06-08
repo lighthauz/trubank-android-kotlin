@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/ic_share"
+        android:title="@string/share"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/money"
+        android:icon="@drawable/ic_money"
+        android:title="@string/exchange_money"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/upgrade"
+        android:icon="@drawable/ic_upgrade"
+        android:title="@string/upgrade_to_executive"
+        app:showAsAction="ifRoom"/>
+</menu>
