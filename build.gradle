@@ -6,7 +6,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.3'
+        classpath 'com.android.tools.build:gradle:4.0.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.koin:koin-gradle-plugin:$koin_version"
     }
@@ -36,14 +36,14 @@ ext.currentBranch = {
 allprojects {
     repositories {
         google()
-        mavenCentral()
         mavenLocal()
+        maven { url "https://jitpack.io" }
+        maven { url  "https://dl.bintray.com/thitu/releases" }
         jcenter()
-
         maven {
             credentials {
-                username = System.getenv("trusonaUsername")
-                password = System.getenv("trusonaPassword")
+                username = "$System.env.ARTIFACTORY_USERNAME"
+                password = "$System.env.ARTIFACTORY_PASSWORD"
             }
             url = "https://trusona.jfrog.io/trusona/sdk-releases/"
         }
