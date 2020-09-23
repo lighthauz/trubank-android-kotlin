@@ -11,16 +11,11 @@ import com.trusona.android.sdk.Trusona
 import com.trusona.trubank.R
 import com.trusona.trubank.Trusona.DeviceIdenfitierRequester
 import com.trusona.trubank.databinding.ActivityMainBinding
-import com.trusona.trubank.ui.viewmodel.RegistrationViewModel
-import com.trusona.trubank.ui.viewmodel.SessionViewModel
-import com.trusona.trubank.ui.viewmodel.ViewModelModule
-import org.koin.android.viewmodel.ext.android.viewModel
-
 
 class MainActivity : AppCompatActivity() {
 
-    private val registrationViewModel by viewModel<RegistrationViewModel>()
-    private val sessionViewModel by viewModel<SessionViewModel>()
+//    private val registrationViewModel by viewModel<RegistrationViewModel>()
+//    private val sessionViewModel by viewModel<SessionViewModel>()
 
     private lateinit var binding: ActivityMainBinding
 
@@ -32,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         getDeviceIdentifier()
     }
 
-    fun getDeviceIdentifier(){
+    fun getDeviceIdentifier() {
         val trusona = Trusona()
         trusona.getDeviceIdentifier(this, DeviceIdenfitierRequester())
     }
@@ -60,9 +55,5 @@ class MainActivity : AppCompatActivity() {
         dialog.setContentView(view)
 
         dialog.show()
-    }
-
-    fun loadModules() {
-        ViewModelModule.loadModules()
     }
 }
