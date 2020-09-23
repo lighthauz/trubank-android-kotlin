@@ -186,4 +186,8 @@
     <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@color/cardview_dark_background</item>
     </style>
+
+    <style name="BottomNavigation.SelectedItemTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

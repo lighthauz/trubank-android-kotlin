@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/one_time_code_menu">
+        <item
+            android:id="@+id/home_menu"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/trucode_menu"
+            android:icon="@drawable/ic_scan"
+            android:menuCategory="secondary"
+            android:title="@string/trucode" />
+        <item
+            android:id="@+id/settings_menu"
+            android:icon="@drawable/ic_settings"
+            android:menuCategory="secondary"
+            android:title="@string/settings" />
+    </group>
+</menu>

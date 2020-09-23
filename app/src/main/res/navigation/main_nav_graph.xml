@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/landing">
+
+    <fragment
+        android:id="@+id/landing"
+        android:name="com.trusona.trubank.ui.fragment.LandingFragment"
+        android:label="LandingFragment">
+        <action
+            android:id="@+id/action_landingFragment_to_homeFragment"
+            app:destination="@id/home_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/home_menu"
+        android:name="com.trusona.trubank.ui.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_trucodeContainerFragment"
+            app:destination="@id/trucode_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings_menu"
+        android:name="com.trusona.trubank.ui.fragment.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/trucode_menu"
+        android:name="com.trusona.trubank.ui.fragment.TrucodeContainerFragment"
+        android:label="fragment_trucode_container"
+        tools:layout="@layout/fragment_trucode_container">
+        <action
+            android:id="@+id/action_trucodeContainerFragment_to_settingsFragment"
+            app:destination="@id/settings_menu" />
+    </fragment>
+</navigation>

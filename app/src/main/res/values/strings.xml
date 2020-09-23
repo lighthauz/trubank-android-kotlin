@@ -85,4 +85,6 @@
     <string name="default_username">Sonia Trudeau</string>
     <string name="ok">OK</string>
     <string name="fund_transfer_trusonafication_phrase_format">%1$s would like to confirm your %2$s to %3$s for the amount of %4$s</string>
+    <string name="home">Home</string>
+    <string name="trucode">Trucode</string>
 </resources>
