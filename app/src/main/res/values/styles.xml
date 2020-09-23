@@ -1,12 +1,185 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="app_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/acme_blue</item>
+        <item name="colorPrimaryDark">@color/acme_blue</item>
+        <item name="colorAccent">@color/acme_blue</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:actionBarStyle">@style/toolbar</item>
     </style>
+
+    <style name="primary">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@color/background_blue</item>
+    </style>
+
+    <style name="primary_screen" parent="primary">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">@dimen/screen_padding</item>
+    </style>
+
+    <style name="primary_element" parent="primary">
+        <item name="android:layout_marginBottom">@dimen/label_margin_bottom</item>
+    </style>
+
+    <style name="account_value" parent="primary_element">
+        <item name="android:textColor">@color/acme_blue</item>
+        <item name="android:textSize">@dimen/account_value_text_size</item>
+    </style>
+
+    <style name="label" parent="primary">
+        <item name="android:textColor">@color/acme_blue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginTop">@dimen/label_margin_top</item>
+    </style>
+
+    <style name="primary_inverse" parent="primary">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@color/acme_blue</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="button" parent="primary_inverse">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/element_margin_top</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:background">@drawable/primary_button</item>
+    </style>
+
+    <style name="button_danger" parent="button">
+        <item name="android:background">@drawable/button_danger</item>
+    </style>
+
+    <style name="primary_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@drawable/primary_button</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+    <style name="secondary_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@drawable/secondary_button</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="header" parent="primary">
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="header_inverse" parent="primary_inverse">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/header_text_size</item>
+    </style>
+
+    <style name="app_banner" parent="header_inverse">
+        <item name="android:padding">@dimen/screen_padding</item>
+    </style>
+
+    <style name="logo">
+        <item name="android:layout_width">@dimen/logo_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/acmebank_gray</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="text_field">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="toolbar" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:background">@color/acme_blue</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="popupTheme">@style/Theme.AppCompat.Light.NoActionBar</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearance</item>
+    </style>
+
+    <style name="myCustomMenuTextApearance" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@android:color/primary_text_dark</item>
+    </style>
+
+    <style name="trubank_logo">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:src">@drawable/acmebank_blue</item>
+    </style>
+
+
+
+    <style name="horizontalGuideline">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+    </style>
+
+    <style name="referenceBaseline">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+    </style>
+
+    <style name="genericText">
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">@color/shadow_text</item>
+        <item name="android:layout_marginLeft">@dimen/grid_and_a_half_offset2</item>
+        <item name="android:layout_marginRight">@dimen/grid_and_a_half_offset2</item>
+        <item name="android:shadowDx">6</item>
+        <item name="android:shadowDy">6</item>
+        <item name="android:shadowRadius">6</item>
+    </style>
+
+    <style name="genericTitle_withShadows" parent="genericText">
+        <item name="android:textSize">@dimen/text_unit_and_half2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:lineSpacingExtra">@dimen/grid_and_a_half_offset2</item>
+    </style>
+
+    <style name="genericLightText_withShadows" parent="genericText">
+        <item name="android:textSize">@dimen/base_text_unit2</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:lineSpacingExtra">@dimen/half_grid_offset2</item>
+        <item name="android:layout_marginTop">@dimen/body_top_margin2</item>
+    </style>
+
+    <style name="matchConstraintLayoutContainer">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+
+
 
     <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/BottomSheetStyle</item>

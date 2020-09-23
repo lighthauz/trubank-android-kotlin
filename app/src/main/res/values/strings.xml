@@ -11,4 +11,78 @@
     <string name="copyright_text1">\u00A9 2020 TruMobile Banking Corporation. All rights reserved. TrueMobile Banking N.A. Member. Equal TruBanking Lender</string>
     <string name="enter_email_address">user@example.com</string>
     <string name="email">Email Address</string>
+    <string name="registration_identifier">Registration Identifier</string>
+    <string name="account_not_registered">You have not registered with Trusona yet\n\nTap the Experience #NoMorePasswords™ button on the home screen to get started</string>
+    <string name="checking">Checking Account - 1345</string>
+    <string name="creating_account">Registering Account&#8230;</string>
+    <string name="email_placeholder">example@example.org</string>
+    <string name="error_occurred">An Error Occurred</string>
+    <string name="executive_upgrade_completed">Executive upgrade completed</string>
+    <string name="register_with_trusona">Experience #NoMorePasswords™</string>
+    <string name="reset_demo">Reset TruBank Demo</string>
+    <string name="resetting_demo">Resetting Demo&#8230;</string>
+    <string name="savings">Savings Account - 2968</string>
+    <string name="cash_reward">Cash Rewards Signature Visa - 2968</string>
+    <string name="risk_free">Risk Free CD - 3321</string>
+    <string name="settings">Profile &amp; Settings</string>
+    <string name="truqr_example">TruCode Login Example</string>
+    <string name="user_registration_failed">User registration failed</string>
+    <string name="uuid_placeholder">00000000&#8211;0000&#8211;0000&#8211;0000&#8211;000000000000</string>
+    <string name="device_identifier">Device Identifier</string>
+    <string name="feature_coming_soon">Feature coming soon!</string>
+
+    <string name="registration_was_successful">Registration was successful</string>
+    <string name="device_status">Device Status</string>
+    <string name="trusonafication_failure">Failed to trusonafy</string>
+    <string name="go_back">Go Back</string>
+    <string name="yes">Yes</string>
+    <string name="toolbar_title">Account</string>
+    <string name="open_saving_account_button_text">Open a saving account</string>
+    <string name="copyright_text2">\u00A9 2018 Mobile Banking Corporation. All rights reserved. Mobile Banking N.A. Member ABCD. Banking Housing Lender</string>
+    <string name="email_confirmation"><b>%1$s</b>\n\nIs this correct?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="signing_in">Signing in…</string>
+    <string name="email_verification_prompt_message">To complete, tap the link sent to\n<b>%1$s</b></string>
+    <string name="email_verification_prompt_title">Almost done!</string>
+    <string name="continue_text">Continue</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="logo">Logo</string>
+    <string name="loading">Loading…</string>
+    <string name="failed_trucode">TruCode authentication failed</string>
+    <string name="success_trucode">Successfully processed TruCode</string>
+    <string name="no_password_login"><b>#NoPasswords Login</b></string>
+    <string name="account">Accounts</string>
+    <string name="transfer_money">Transfer Money</string>
+    <string name="deposit_checks">Deposit Checks</string>
+    <string name="credit_score">Credit Score</string>
+    <string name="alerts">Alerts</string>
+    <string name="Contact_us">Contact Us</string>
+    <string name="locations">Locations</string>
+    <string name="send_app_feedback">Send App Feedback</string>
+    <string name="trusonafication_default_message">Acme bank would like to confirm your login to Acmebank.com</string>
+    <string name="trusonafication_reject_button_text">Reject</string>
+    <string name="trusonafication_accept_button_text">Accept</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="relaying_party_generic_name">Relaying Party</string>
+    <string name="deep_link_error">Deep-link error occurred</string>
+
+    <!-- Label for the accept button in the trusonafication accept/reject screen -->
+    <string name="trusonafication_accept">Accept</string>
+    <!-- Label for the reject button in the trusonafication accept/reject screen -->
+    <string name="trusonafication_reject">Reject</string>
+    <string name="bill_pay">Bill Pay</string>
+    <string name="transfers">Transfers</string>
+    <string name="deposit">Deposit</string>
+    <string name="bank_accounts">Bank Accounts</string>
+    <string name="risk_free_amount">$2613.40</string>
+    <string name="cash_reward_amount">$900</string>
+
+    <string name="scanner_message">To log in to Trubank on your computer, \n scan the code on the computer.</string>
+    <string name="show_me_how">Show me how</string>
+    <string name="menu">menu</string>
+
+    <string name="default_username">Sonia Trudeau</string>
+    <string name="ok">OK</string>
+    <string name="fund_transfer_trusonafication_phrase_format">%1$s would like to confirm your %2$s to %3$s for the amount of %4$s</string>
 </resources>

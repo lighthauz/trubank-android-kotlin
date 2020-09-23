@@ -3,4 +3,18 @@
     <color name="colorPrimary">#3FA1D2</color>
     <color name="colorPrimaryDark">#104072</color>
     <color name="colorAccent">#3FA1D2</color>
+
+    <color name="button_danger_disabled_background">#c6796d</color>
+    <color name="button_danger_enabled_background">#cc513e</color>
+
+    <color name="acme_blue">#3FA1D2</color>
+    <color name="light_gray">#EEEEEE</color>
+    <color name="dark_gray">#929497</color>
+    <color name="highlight_blue">#104072</color>
+    <color name="the_green">#76AD68</color>
+    <color name="the_disable_green">#8076AD68</color>
+    <color name="background_blue">#EDF1F4</color>
+
+    <color name="secured">#19064E</color>
+    <color name="shadow_text">#32000000</color>
 </resources>

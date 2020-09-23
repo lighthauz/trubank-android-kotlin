@@ -1,8 +1,10 @@
 package com.trusona.trubank
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 
+@HiltAndroidApp
 class TrubankApp : Application() {
 
     override fun onCreate() {

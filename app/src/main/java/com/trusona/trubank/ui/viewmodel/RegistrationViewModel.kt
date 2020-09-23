@@ -24,9 +24,7 @@ class RegistrationViewModel(private val registrationDataSource: RegistrationData
         }
     }
 
-    fun get(
-        registrationIdentifier: String
-    ) {
+    fun get(registrationIdentifier: String) {
         viewModelScope.launch {
             val response = registrationDataSource.get(registrationIdentifier, this)
             _registrationResult.value = response.value
