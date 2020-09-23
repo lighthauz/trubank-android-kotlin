@@ -28,6 +28,12 @@
     style="@style/primary_screen"
     android:orientation="vertical">
 
+    <Button
+        android:id="@+id/main_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Move on" />
+
     <include
         layout="@layout/sign_in_view"
         android:layout_width="match_parent"
@@ -35,6 +41,7 @@
         android:layout_weight="1" />
 
     <include layout="@layout/registration_view" />
+
 
     <include
         layout="@layout/verification_prompt_view"
