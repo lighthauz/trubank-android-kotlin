@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "593447240833",
+    "firebase_url": "https://trunk-kotlin.firebaseio.com",
+    "project_id": "trunk-kotlin",
+    "storage_bucket": "trunk-kotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593447240833:android:da5771897671f87868b980",
+        "android_client_info": {
+          "package_name": "com.trusona.trubank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593447240833-dusfv8unb0h1n2pomcfti3dg09pd6fkk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGEgTbmYZ2oCz4sbCLmG8I_OIy6zhzmK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593447240833-dusfv8unb0h1n2pomcfti3dg09pd6fkk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
